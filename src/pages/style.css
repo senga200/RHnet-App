@@ -1,0 +1,126 @@
+
+.createEmployee_container, .currentEmployee_container{
+    background-color: #93ad18;
+    padding-bottom: 100px;
+}
+
+h2{
+    background-color: white;
+    padding: 20px;
+    position: absolute;
+    top: 260px;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    border-radius: 10px;
+}
+
+
+#create-employee{
+    border: thick double #597008;
+    border-radius: 5px;
+    display: flex;
+    padding:20px 60px 20px 60px ;
+    width: 400px;
+    flex-direction: column;
+}
+
+label {
+    display: block;
+    margin-top: 1rem;
+    margin-bottom: 10px;
+}
+
+input{
+    border-radius: 3px;
+}
+
+.submitButton{
+    background-color:#597008;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0 20px 0;
+    padding: 15px;
+    border-radius: 5px;
+    border: none;
+}
+
+.submitButton:hover{
+    background-color:#93ad18;
+    color: white;
+    cursor: pointer;
+}
+
+.address {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.alert{
+    font-weight: bold;
+}
+
+.requiredFields{
+    padding-top: 20px;
+    font-weight: thin;
+    font-style: italic;
+    font-size: 12px;
+    text-align: end;
+}
+
+
+.container_border {
+    border: thick double #597008;
+    padding:20px 60px 20px 60px ;
+    border-radius: 5px;
+}
+
+
+.err404 {
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 320px;
+    font-size: 2em;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+/*bouton pagination de la table bootstrap*/
+
+
+/* CSS personnalisé */
+.ButtonGroup__root .btn {
+   background-color : grey;
+   border: solid 1px rgb(40, 40, 40);
+   margin-left: 20px;
+}
+
+.ButtonGroup__root .btn:hover {
+   background-color : rgb(40, 40, 40);
+   border: solid 1px rgb(40, 40, 40);
+}
+
+button.btn.btn-primary {
+   background-color : grey;
+   border: solid 1px rgb(40, 40, 40);
+}   
+
+input{
+    width: 170px;
+}
