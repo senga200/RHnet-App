@@ -17,15 +17,26 @@ Environement de developpement : create react app
 # Todo
 
 ✅ Convertir l'un des quatre plugins jQuery actuels en React.   
-📦 lien vers le package SELECT NPM  : https://www.npmjs.com/package/react-library-senga
 
+📦 lien vers le package SELECT NPM  : https://www.npmjs.com/package/react-library-senga  
+dont le code source se trouvera ici : https://github.com/senga200/Select_Component_src  
+
+  
 ✅ Les autres plugins jQuery restants sont convertis en composants React (modal, table, datepicker)  
 
+
+  
 ✅ DEPLOIEMENT  
-L'app en React :    
+
+  - Deploiement de L'app en React :    
 https://r-hnet-comp-kcbyii94f-senga200.vercel.app/  
-Afin de tester les performances dans des conditions identiques, l'application en jQuery a également été déployée :  
-https://h-rnet-jquery-pwauhwb94-senga200.vercel.app/
+dont voici les performances mesurées grace à Lighthouse :  
+https://github.com/senga200/RHnet-comp/blob/main/React_Lighthouse_ReportViewer.pdf  
+
+  - Afin de tester les performances dans des conditions identiques, l'application en jQuery a également été déployée :  
+https://h-rnet-jquery-pwauhwb94-senga200.vercel.app/  
+dont voici les performaces mesurées grace à Lighthouse : 
+https://github.com/senga200/RHnet-comp/blob/main/jQuery_Lighthouse_ReportViewer.pdf
 
 
 
