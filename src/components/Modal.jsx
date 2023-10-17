@@ -26,15 +26,11 @@ const ModalOverlay = ({ isOpen, isClose, content }) => {
   );
 };
 
-const Modal = (props) => {
+const Modal = ({ isOpen, isClose, content }) => {
   return (
     <>
       {ReactDOM.createPortal(
-        <ModalOverlay
-          isClose={props.isClose}
-          isOpen={props.isOpen}
-          content={props.content}
-        />,
+        <ModalOverlay isOpen={isOpen} isClose={isClose} content={content} />,
         document.getElementById("modal-root")
       )}
     </>

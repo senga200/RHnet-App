@@ -10,7 +10,7 @@ import {
   faCalendarDay,
 } from "@fortawesome/free-solid-svg-icons";
 
-function Calendar({ selected, onChange, placeholder }) {
+function Calendar({ selected, onChange }) {
   const goToToday = () => {
     onChange(new Date()); //new Date() = date du jour
   };
@@ -31,6 +31,7 @@ function Calendar({ selected, onChange, placeholder }) {
       <button onClick={goToToday}>
         <FontAwesomeIcon icon={faCalendarDay} />
       </button>
+      {/* customiser le mois */}
       <select
         value={date.getMonth()}
         onChange={(e) => changeMonth(Number(e.target.value))}
@@ -41,6 +42,7 @@ function Calendar({ selected, onChange, placeholder }) {
           </option>
         ))}
       </select>
+      {/* customiser l'année */}
       <select
         value={date.getFullYear()}
         onChange={(e) => changeYear(Number(e.target.value))}
@@ -64,10 +66,7 @@ function Calendar({ selected, onChange, placeholder }) {
         selected={selected}
         onChange={onChange}
         dateFormat="dd/MM/yyyy"
-        customInput={<input placeholder={placeholder} />}
         renderCustomHeader={renderCustomHeader}
-        showYearDropdown
-        yearDropdownItemNumber={42}
       />
     </div>
   );

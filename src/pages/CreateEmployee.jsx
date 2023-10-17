@@ -302,7 +302,7 @@ function CreateEmployee() {
       document.querySelector(".alert").innerHTML =
         "Please fill in all required fields";
       document.querySelector(".alert").style.color = "red";
-      setIsModalOpen(false);
+      //setIsModalOpen(false);
       return;
     } else {
       const formattedStartDate = startDate.toLocaleDateString();

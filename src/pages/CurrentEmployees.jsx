@@ -26,14 +26,46 @@ const headers = [
     prop: "lastName",
     isSortable: true,
   },
-  { title: "Start Date", prop: "startDate", isSortable: true },
-  { title: "Department", prop: "department", isSortable: true },
-  { title: "Date of Birth", prop: "dateOfBirth", isSortable: true },
-  { title: "Street", prop: "street", isSortable: true },
-  { title: "City", prop: "city", isSortable: true },
-  { title: "State", prop: "state", isSortable: true },
-  { title: "Zip Code", prop: "zipCode", isSortable: true },
-  { id: "id", prop: "id", isSortable: false },
+  {
+    title: "Start Date",
+    prop: "startDate",
+    isSortable: true,
+  },
+  {
+    title: "Department",
+    prop: "department",
+    isSortable: true,
+  },
+  {
+    title: "Date of Birth",
+    prop: "dateOfBirth",
+    isSortable: true,
+  },
+  {
+    title: "Street",
+    prop: "street",
+    isSortable: true,
+  },
+  {
+    title: "City",
+    prop: "city",
+    isSortable: true,
+  },
+  {
+    title: "State",
+    prop: "state",
+    isSortable: true,
+  },
+  {
+    title: "Zip Code",
+    prop: "zipCode",
+    isSortable: true,
+  },
+  // {
+  //   id: "id",
+  //   prop: "id",
+  //   isSortable: false
+  // },
   {
     title: "Delete",
     prop: "delete",
@@ -59,7 +91,7 @@ function CurrentEmployees() {
       </div>
       <div className="container">
         <div className="container_border">
-          <Button to="/" text="Creat Employee Form" />
+          <Button to="/" text="Create Employee Form" />
           <h2>Current Employees</h2>
 
           <DatatableWrapper
@@ -80,9 +112,9 @@ function CurrentEmployees() {
                 className="d-flex flex-col justify-content-end align-items-end"
               >
                 <Filter
-                  onFilter={(value) => {
-                    setSearchTerm(value);
-                  }}
+                // onFilter={(value) => {
+                //   setSearchTerm(value);
+                // }}
                 />
               </Col>
               <Col
@@ -108,6 +140,7 @@ function CurrentEmployees() {
                       setSearchTerm(event.target.value);
                     }}
                   />
+                  <Filter />
                 </div>
                 <Pagination />
               </Col>
