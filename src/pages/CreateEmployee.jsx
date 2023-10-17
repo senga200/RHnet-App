@@ -272,7 +272,7 @@ function CreateEmployee() {
   const [lastName, setLastName] = useState("");
   const [street, setStreet] = useState("");
   const [city, setCity] = useState("");
-  const [state, setState] = useState("");
+  const [usaState, setUsaState] = useState("");
   const [department, setDepartment] = useState("");
   const [startDate, setStartDate] = useState("");
   const [dateOfBirth, setDateOfBirth] = useState("");
@@ -292,7 +292,7 @@ function CreateEmployee() {
       !lastName ||
       !street ||
       !city ||
-      !state ||
+      !usaState ||
       !department ||
       !zipCode ||
       !startDate ||
@@ -302,7 +302,6 @@ function CreateEmployee() {
       document.querySelector(".alert").innerHTML =
         "Please fill in all required fields";
       document.querySelector(".alert").style.color = "red";
-      //setIsModalOpen(false);
       return;
     } else {
       const formattedStartDate = startDate.toLocaleDateString();
@@ -314,7 +313,7 @@ function CreateEmployee() {
           lastName,
           street,
           city,
-          state,
+          usaState,
           department,
           startDate: formattedStartDate,
           dateOfBirth: formattedDateOfBirth,
@@ -331,7 +330,7 @@ function CreateEmployee() {
     setCity("");
     setStartDate("");
     setDateOfBirth("");
-    setState("");
+    setUsaState("");
     setZipCode("");
     setDepartment("");
   };
@@ -391,16 +390,16 @@ function CreateEmployee() {
               onChange={(e) => setCity(e.target.value)}
             />
 
-            <label htmlFor="state">State *</label>
+            <label htmlFor="usaState">State *</label>
             <Select
               options={usaStates.map((state) => ({
                 label: state.name,
                 value: state.abbreviation,
               }))}
-              id="state"
-              name="state"
-              value={state}
-              onChange={(e) => setState(e.target.value)}
+              id="usaState"
+              name="usaState"
+              value={usaState}
+              onChange={(e) => setUsaState(e.target.value)}
             />
 
             <label htmlFor="zip-code">Zip Code *</label>
