@@ -15,7 +15,7 @@ import {
   addEmployeeFailure,
 } from "../actions/EmployeesActions";
 
-const usaStates = [
+const states = [
   {
     name: "Alabama",
     abbreviation: "AL",
@@ -272,7 +272,7 @@ function CreateEmployee() {
   const [lastName, setLastName] = useState("");
   const [street, setStreet] = useState("");
   const [city, setCity] = useState("");
-  const [usaState, setUsaState] = useState("");
+  const [state, setState] = useState("");
   const [department, setDepartment] = useState("");
   const [startDate, setStartDate] = useState("");
   const [dateOfBirth, setDateOfBirth] = useState("");
@@ -292,7 +292,7 @@ function CreateEmployee() {
       !lastName ||
       !street ||
       !city ||
-      !usaState ||
+      !state ||
       !department ||
       !zipCode ||
       !startDate ||
@@ -313,7 +313,7 @@ function CreateEmployee() {
           lastName,
           street,
           city,
-          usaState,
+          state,
           department,
           startDate: formattedStartDate,
           dateOfBirth: formattedDateOfBirth,
@@ -330,7 +330,7 @@ function CreateEmployee() {
     setCity("");
     setStartDate("");
     setDateOfBirth("");
-    setUsaState("");
+    setState("");
     setZipCode("");
     setDepartment("");
   };
@@ -390,16 +390,16 @@ function CreateEmployee() {
               onChange={(e) => setCity(e.target.value)}
             />
 
-            <label htmlFor="usaState">State *</label>
+            <label htmlFor="state">State *</label>
             <Select
-              options={usaStates.map((state) => ({
+              options={states.map((state) => ({
                 label: state.name,
                 value: state.abbreviation,
               }))}
-              id="usaState"
-              name="usaState"
-              value={usaState}
-              onChange={(e) => setUsaState(e.target.value)}
+              id="state"
+              name="state"
+              value={state}
+              onChange={(e) => setState(e.target.value)}
             />
 
             <label htmlFor="zip-code">Zip Code *</label>
