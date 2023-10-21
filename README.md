@@ -18,8 +18,8 @@ Environement de developpement : create react app
 
 ✅ Convertir l'un des quatre plugins jQuery actuels en React.   
 
-📦 lien vers le package SELECT NPM  : https://www.npmjs.com/package/react-library-senga  
-dont le code source se trouvera ici : https://github.com/senga200/Select_Component_src  
+📦 lien vers le package SELECT NPM  : https://www.npmjs.com/package/react-select-for-hrnet 
+dont le code source se trouvera ici : https://github.com/senga200/hrNet-component
 
   
 ✅ Les autres plugins jQuery restants sont convertis en composants React (modal, table, datepicker)  
@@ -29,7 +29,7 @@ dont le code source se trouvera ici : https://github.com/senga200/Select_Compone
 ✅ DEPLOIEMENT  
 
   - Deploiement de L'app en React :    
-https://r-hnet-comp-kcbyii94f-senga200.vercel.app/  
+[https://r-hnet-comp-kcbyii94f-senga200.vercel.app/](https://r-hnet-comp.vercel.app/)  
 dont voici les performances mesurées grace à Lighthouse :  
 https://github.com/senga200/RHnet-comp/blob/main/React_Lighthouse_ReportViewer.pdf  
 
