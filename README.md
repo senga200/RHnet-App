@@ -29,7 +29,7 @@ dont le code source se trouvera ici : https://github.com/senga200/hrNet-componen
 ✅ DEPLOIEMENT  
 
   - Deploiement de L'app en React :    
-https://r-hnet-comp-kcbyii94f-senga200.vercel.app/  
+[https://r-hnet-comp-kcbyii94f-senga200.vercel.app/](https://r-hnet-comp.vercel.app/)  
 dont voici les performances mesurées grace à Lighthouse :  
 https://github.com/senga200/RHnet-comp/blob/main/React_Lighthouse_ReportViewer.pdf  
 
