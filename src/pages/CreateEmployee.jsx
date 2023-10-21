@@ -4,10 +4,8 @@ import Header from "../components/Header";
 import Calendar from "../components/Calendar";
 import Modal from "../components/Modal";
 import Button from "../components/Button";
-import Select from "react-select-for-hrnet";
-import "react-select-for-hrnet/src/Select.css";
+import Select from "react-library-senga";
 
-//redux
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
@@ -265,7 +263,6 @@ const departments = [
 
 function CreateEmployee() {
   const dispatch = useDispatch();
-
   const newEmployee = useSelector((state) => state.employeesList);
 
   const [firstName, setFirstName] = useState("");
@@ -320,9 +317,9 @@ function CreateEmployee() {
           zipCode,
         })
       );
-      document.querySelector(".alert").innerHTML = "";
       setIsModalOpen(true);
       setContentModal("employee create successfully !");
+      document.querySelector(".alert").innerHTML = "";
     }
     // vider les champs du formulaire
     setFirstName("");

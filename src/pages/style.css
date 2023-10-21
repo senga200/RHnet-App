@@ -48,15 +48,6 @@ input{
     border-radius: 3px;
 }
 
-.selectInput{
-    border-radius: 3px;
-    margin-bottom: 5px;
-}
-
-.selectInput:hover{
-    background-color: #93ad18;
-}
-
 
 
 .submitButton{
