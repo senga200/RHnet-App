@@ -4,8 +4,8 @@ import ReactDOM from "react-dom";
 
 const ModalOverlay = ({ isOpen, isClose, content }) => {
   const handleModalClick = (e) => {
+    // Si l'élément cliqué est l'arrière-plan modal, ignorer le clic
     if (e.target.classList.contains("modalBack")) {
-      // Si l'élément cliqué est l'arrière-plan modal, ignorer le clic
       return;
     }
   };

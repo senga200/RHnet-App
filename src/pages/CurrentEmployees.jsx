@@ -61,11 +61,6 @@ const headers = [
     prop: "zipCode",
     isSortable: true,
   },
-  // {
-  //   id: "id",
-  //   prop: "id",
-  //   isSortable: false
-  // },
   {
     title: "Delete",
     prop: "delete",
@@ -74,11 +69,14 @@ const headers = [
   },
 ];
 
+const countEmployees = (employees) => {
+  return employees.length;
+};
+
 function CurrentEmployees() {
   const employees = useSelector((state) => state.employeesList.employees);
-  console.log(" liste des employés de currentEmployee", employees);
-
   const [searchTerm, setSearchTerm] = useState("");
+
   const filteredEmployees = employees.filter((employee) => {
     const fullName = `${employee.firstName} ${employee.lastName}`;
     return fullName.toLowerCase().includes(searchTerm.toLowerCase());
@@ -93,11 +91,9 @@ function CurrentEmployees() {
         <div className="container_border">
           <Button to="/" text="Create Employee Form" />
           <h2>Current Employees</h2>
-
           <DatatableWrapper
             body={filteredEmployees}
             headers={headers}
-            // pagination={true}
             paginationOptionsProps={{
               initialState: {
                 rowsPerPage: 10,
@@ -111,11 +107,7 @@ function CurrentEmployees() {
                 lg={4}
                 className="d-flex flex-col justify-content-end align-items-end"
               >
-                <Filter
-                // onFilter={(value) => {
-                //   setSearchTerm(value);
-                // }}
-                />
+                <Filter />
               </Col>
               <Col
                 xs={12}
@@ -136,8 +128,8 @@ function CurrentEmployees() {
                     type="text"
                     placeholder="Search..."
                     value={searchTerm}
-                    onChange={(event) => {
-                      setSearchTerm(event.target.value);
+                    onChange={(e) => {
+                      setSearchTerm(e.target.value);
                     }}
                   />
                   <Filter />
@@ -150,6 +142,7 @@ function CurrentEmployees() {
               <TableBody />
             </Table>
           </DatatableWrapper>
+          <span>{countEmployees(employees)} entries </span>
         </div>
       </div>
     </div>

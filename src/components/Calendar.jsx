@@ -12,10 +12,10 @@ import {
 
 function Calendar({ selected, onChange }) {
   const goToToday = () => {
-    onChange(new Date()); //new Date() = date du jour
+    onChange(new Date());
   };
+
   const currentYear = new Date().getFullYear();
-  //console.log("année courante : ", currentYear);
 
   const renderCustomHeader = ({
     date,

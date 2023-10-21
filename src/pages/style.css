@@ -48,6 +48,17 @@ input{
     border-radius: 3px;
 }
 
+.selectInput{
+    border-radius: 3px;
+    margin-bottom: 5px;
+}
+
+.selectInput:hover{
+    background-color: #93ad18;
+}
+
+
+
 .submitButton{
     background-color:#597008;
     color: white;
@@ -102,9 +113,6 @@ input{
 }
 
 /*bouton pagination de la table bootstrap*/
-
-
-/* CSS personnalisé */
 .ButtonGroup__root .btn {
    background-color : grey;
    border: solid 1px rgb(40, 40, 40);

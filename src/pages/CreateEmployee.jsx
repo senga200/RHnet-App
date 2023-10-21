@@ -4,7 +4,8 @@ import Header from "../components/Header";
 import Calendar from "../components/Calendar";
 import Modal from "../components/Modal";
 import Button from "../components/Button";
-import Select from "react-library-senga";
+import Select from "react-select-for-hrnet";
+import "react-select-for-hrnet/src/Select.css";
 
 //redux
 import { useState } from "react";
@@ -264,10 +265,9 @@ const departments = [
 
 function CreateEmployee() {
   const dispatch = useDispatch();
-  //redux
+
   const newEmployee = useSelector((state) => state.employeesList);
 
-  //state :
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [street, setStreet] = useState("");
@@ -320,6 +320,7 @@ function CreateEmployee() {
           zipCode,
         })
       );
+      document.querySelector(".alert").innerHTML = "";
       setIsModalOpen(true);
       setContentModal("employee create successfully !");
     }
@@ -334,8 +335,6 @@ function CreateEmployee() {
     setZipCode("");
     setDepartment("");
   };
-
-  console.log("nouvel employé", newEmployee);
 
   return (
     <div className="createEmployee_container">
